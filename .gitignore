@@ -1,0 +1,10 @@
+# Quarto cache and rendered outputs
+manuscript/.quarto/
+manuscript/article.pdf
+manuscript/article.docx
+manuscript/*.tex
+manuscript/*.log
+manuscript/*.aux
+
+# macOS
+.DS_Store

@@ -1,0 +1,33 @@
+project:
+  type: default
+  post-render: python3 center-images.py
+
+format:
+  pdf:
+    pdf-engine: xelatex
+    documentclass: scrartcl
+
+    toc: false
+    number-sections: false
+
+    fontsize: 11pt
+    linestretch: 1.15
+
+    geometry:
+      - top=3cm
+      - bottom=3cm
+      - left=3.2cm
+      - right=3.2cm
+
+    colorlinks: true
+    linkcolor: black
+    urlcolor: black
+    citecolor: black
+
+    include-in-header:
+      - preamble.tex
+
+  docx: default
+
+execute:
+  echo: false

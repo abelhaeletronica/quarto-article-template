@@ -1,0 +1,52 @@
+---
+lang: en
+title: "Article Title"
+subtitle: "Article Subtitle"
+
+bibliography: ../references/references.bib
+# csl: ../references/your-journal.csl  ← uncomment and set path when you have a CSL file
+---
+
+```{=latex}
+% PDF author block.
+\authorname{Author Name}
+
+% Use \\ for line breaks inside the affiliation/contact block.
+\authoraffil{Institution Name\\
+email@institution.edu\\
+\url{https://orcid.org/0000-0000-0000-0000}}
+```
+
+::: {.content-hidden when-format="pdf"}
+::: {custom-style="Centered"}
+Author Name
+https://orcid.org/0000-0000-0000-0000
+
+Institution Name
+email@institution.edu
+:::
+:::
+
+```{=latex}
+\begin{articleabstract}
+Abstract text goes here.
+
+\medskip\noindent\textbf{Keywords:} keyword one; keyword two; keyword three
+\end{articleabstract}
+```
+
+::: {.content-hidden when-format="pdf"}
+Abstract text goes here.
+
+**Keywords:** keyword one; keyword two; keyword three
+:::
+
+# Introduction
+
+# Background
+
+# Discussion
+
+# Conclusion
+
+# References
