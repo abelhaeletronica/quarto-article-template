@@ -4,7 +4,7 @@ project:
 
 format:
   pdf:
-    pdf-engine: xelatex
+    pdf-engine: pdflatex
     documentclass: scrartcl
 
     toc: false
