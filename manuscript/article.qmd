@@ -1,10 +1,13 @@
 ---
 lang: en
-title: "Article Title"
-subtitle: "Article Subtitle"
+title: “Article Title”
+subtitle: “Article Subtitle”
+
+date: last-modified
+date-format: “MMMM YYYY”
 
 bibliography: ../references/references.bib
-# csl: ../references/your-journal.csl  ← uncomment and set path when you have a CSL file
+link-citations: true
 ---
 
 ```{=latex}
@@ -21,6 +24,9 @@ email@institution.edu\\
 ::: {custom-style="Centered"}
 Author Name
 https://orcid.org/0000-0000-0000-0000
+% \url{https://doi.org/10.5281/zenodo.XXXXXXX}
+
+
 
 Institution Name
 email@institution.edu
