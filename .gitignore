@@ -8,3 +8,5 @@ manuscript/*.aux
 
 # macOS
 .DS_Store
+!/manuscript/preamble.tex
+

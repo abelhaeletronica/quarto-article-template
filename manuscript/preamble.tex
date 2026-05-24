@@ -1,0 +1,134 @@
+% -----------------------------
+% TYPOGRAPHY
+% -----------------------------
+
+\usepackage[final]{microtype}
+\usepackage{setspace}
+\usepackage{csquotes}
+\usepackage{xurl}
+
+% EB Garamond como fonte principal
+\usepackage{ebgaramond}
+
+% Cabin como sans-serif para títulos
+\usepackage[scaled=0.95]{cabin}
+
+% -----------------------------
+% SECTION TITLES
+% -----------------------------
+
+\setkomafont{section}{
+  \normalfont\sffamily\bfseries\Large
+}
+
+\setkomafont{subsection}{
+  \normalfont\sffamily\bfseries\large
+}
+
+\setkomafont{subsubsection}{
+  \normalfont\sffamily\bfseries
+}
+
+% -----------------------------
+% CAPTIONS
+% -----------------------------
+
+\usepackage{caption}
+
+\captionsetup{
+  font={sf,small},
+  labelfont=bf,
+  labelsep=space,
+  justification=raggedright,
+  singlelinecheck=false,
+  skip=6pt
+}
+
+% -----------------------------
+% PARAGRAPH STYLE
+% -----------------------------
+
+\setlength{\parindent}{1.2em}
+\setlength{\parskip}{0.3em}
+
+% -----------------------------
+% BLOCK QUOTES
+% -----------------------------
+
+\usepackage{etoolbox}
+
+\AtBeginEnvironment{quote}{
+  \small
+}
+
+% -----------------------------
+% REFERENCES
+% -----------------------------
+
+\KOMAoptions{
+  bibliography=totoc
+}
+
+% -----------------------------
+% TITLE BLOCK
+% -----------------------------
+
+\newcommand{\articletitle}[2]{%
+  \begin{center}
+    {\mdseries\fontsize{19}{19}\selectfont\sffamily #1\par}
+    \vspace{0.3em}
+    {\Large\sffamily #2}
+  \end{center}
+}
+
+\newenvironment{articleabstract}{%
+  \begin{addmargin}[1.5em]{1.5em}
+  \small\setlength{\parindent}{0pt}
+}{%
+  \end{addmargin}
+  \vspace{0.5em}
+}
+
+\newcommand{\authorname}[1]{%
+  \begin{center}
+    {\sffamily\large\bfseries #1}
+  \end{center}
+}
+
+\newcommand{\authoraffil}[1]{%
+  \begin{center}
+    {\footnotesize\sffamily
+      \renewcommand{\arraystretch}{0.85}%
+      \begin{tabular}{@{}c@{}}
+        #1
+      \end{tabular}}
+  \end{center}
+}
+
+% -----------------------------
+% HEADER / FOOTER
+% -----------------------------
+
+\usepackage[
+  automark,
+  headsepline=false,
+  footsepline=false
+]{scrlayer-scrpage}
+
+\clearpairofpagestyles
+
+\cfoot[\pagemark]{\pagemark}
+
+\newcommand{\headerauthor}{}
+\newcommand{\headertitle}{}
+\newcommand{\setheaderauthor}[1]{\renewcommand{\headerauthor}{#1}}
+\newcommand{\setheadertitle}[1]{\renewcommand{\headertitle}{#1}}
+
+\ihead{\ifodd\value{page}\else{\sffamily\footnotesize\headerauthor}\fi}
+\ohead{\ifodd\value{page}{\sffamily\footnotesize\headertitle}\else\fi}
+
+\AtBeginDocument{\thispagestyle{plain}}
+
+\setkomafont{pageheadfoot}{\normalfont\footnotesize}
+\setkomafont{pagenumber}{\normalfont\sffamily\footnotesize}
+
